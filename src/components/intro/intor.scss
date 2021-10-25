@@ -1,0 +1,89 @@
+@import "../../global.scss";
+
+.intro {
+  background: white;
+  display: flex;
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    flex: 6;
+    overflow: hidden;
+
+    .imgCls {
+      width: 500px;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-image: 
+      linear-gradient(336deg, rgba(153,88,199,0.8), rgba(0,0,0,0) 70.71%);
+      float: left;
+      margin: 20px 0px 0px 10px;
+      overflow: hidden;
+      @include mobile {
+        width: 400px;
+        height: 400px;
+      }
+      img {
+        height: 100%;
+        @include mobile {
+          height: 50%;
+         
+        }
+      }
+    }
+  }
+  .right {
+    position: relative;
+    flex: 6;
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 100px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 30px;
+          overflow: hidden;
+          @include mobile {
+            font-size: 25px;
+            padding-left: 0;
+            align-items: center;
+          }
+      span {
+        font-size: inherit;
+        color: rgb(209, 23, 255);
+        .ityped-cursor {
+          animation: blink 2s infinite;
+        
+        }
+        @keyframes blink {
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 5%;
+      img {
+        width: 30px;
+        animation: arrowBlink 2s infinite;
+      }
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
